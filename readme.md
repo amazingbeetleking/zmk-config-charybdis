@@ -566,7 +566,7 @@ Built firmware files are automatically copied to `manual_build/artifacts/output/
 
 2. Flash `charybdis_left-nice_nano-zmk.uf2` to the left keyboard
 3. Flash `dongle_charybdis_right-nice_nano-zmk.uf2` to the right keyboard
-4. **Important**: Pair the left keyboard to the dongle first, then pair the right keyboard
+4. **Important**: Pair the left keyboard to the dongle first, then pair the right keyboard (paring occurs when reset firmware is flashed prior to main firmware). Just ensure to follow two previous steps in order (left first, then right) and the battery status will display correctly on the dongle.
 
 ### Tester Pro Micro (GPIO Testing)
 
