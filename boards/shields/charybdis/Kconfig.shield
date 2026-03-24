@@ -1,45 +1,17 @@
-if SHIELD_CHARYBDIS_RIGHT_STANDALONE
+config SHIELD_CHARYBDIS_LEFT
+	def_bool $(shields_list_contains,charybdis_left)
 
-config ZMK_KEYBOARD_NAME
-	default "Charybdis"
+config SHIELD_CHARYBDIS_RIGHT_STANDALONE
+	def_bool $(shields_list_contains,charybdis_right_standalone)
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
+config SHIELD_DONGLE_CHARYBDIS_RIGHT
+	def_bool $(shields_list_contains,dongle_charybdis_right)
 
-endif
+config SHIELD_DONGLE_PROSPECTOR
+	def_bool $(shields_list_contains,dongle_prospector)
 
-if SHIELD_DONGLE_CHARYBDIS_RIGHT
+config SHIELD_DONGLE_YADS_PROSPECTOR
+	def_bool $(shields_list_contains,dongle_yads_prospector)
 
-config ZMK_KEYBOARD_NAME
-	default "Charybdis Right"
-
-endif
-
-if SHIELD_DONGLE_PROSPECTOR || SHIELD_DONGLE_BWSHOCKLEY_PROSPECTOR
-
-config ZMK_KEYBOARD_NAME
-	default "Charybdis"
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
-
-endif
-
-if SHIELD_DONGLE_NICE
-
-config ZMK_KEYBOARD_NAME
-	default "Charybdis"
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
-
-endif
-
-
-
-if SHIELD_CHARYBDIS_LEFT || SHIELD_CHARYBDIS_RIGHT_STANDALONE || SHIELD_DONGLE_CHARYBDIS_RIGHT || SHIELD_DONGLE_PROSPECTOR || SHIELD_DONGLE_NICE || SHIELD_DONGLE_BWSHOCKLEY_PROSPECTOR
-
-config ZMK_SPLIT
-	default y
-
-endif
+config SHIELD_DONGLE_NICE
+	def_bool $(shields_list_contains,dongle_nice)
