@@ -130,6 +130,53 @@
         , <&macro_release &mkp LCLK &kp LCTRL &kp LGUI>
         ;
     };
+alt_dot: alt_dot {
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  wait-ms = <30>;
+  tap-ms = <10>;
+  bindings
+    = <&macro_press &kp LALT>
+    , <&macro_tap &kp KP_N0 &kp KP_N0 &kp KP_N4 &kp KP_N6>
+    , <&macro_release &kp LALT>
+    ;
+};
+
+alt_bslh: alt_bslh {
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  wait-ms = <30>;
+  tap-ms = <10>;
+  bindings
+    = <&macro_press &kp LALT>
+    , <&macro_tap &kp KP_N0 &kp KP_N0 &kp KP_N9 &kp KP_N2>
+    , <&macro_release &kp LALT>
+    ;
+};
+
+alt_colon: alt_colon {
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  wait-ms = <30>;
+  tap-ms = <10>;
+  bindings
+    = <&macro_press &kp LALT>
+    , <&macro_tap &kp KP_N0 &kp KP_N0 &kp KP_N5 &kp KP_N8>
+    , <&macro_release &kp LALT>
+    ;
+};
+
+alt_semi: alt_semi {
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  wait-ms = <30>;
+  tap-ms = <10>;
+  bindings
+    = <&macro_press &kp LALT>
+    , <&macro_tap &kp KP_N0 &kp KP_N0 &kp KP_N5 &kp KP_N9>
+    , <&macro_release &kp LALT>
+    ;
+};
   };
 
   combos {
