@@ -218,6 +218,11 @@
       bindings = <&studio_unlock>;
       layers = <BASE>;
     };
+      combo_del {
+      key-positions = <23 24>;
+      bindings = <&kp DEL>;
+      layers = <BASE>;
+   };
   };
 
   keymap {
@@ -326,12 +331,12 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
     &trans        &trans        &trans        &trans        &trans            &trans        &trans        &trans        &trans        &trans
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &to BASE          &kp C_VOL_UP  &kp RSHFT     &kp RCTRL     &kp RALT      &kp RGUI
+    &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &trans            &kp C_VOL_UP  &kp RSHFT     &kp RCTRL     &kp RALT      &kp RGUI
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &kp LC(X)     &kp LC(C)     &kp LC(V)     &trans            &kp C_VOL_DN  &kp C_PP      &tog SNI      &tog SCR      &trans
+    &trans        &kp LC(X)     &kp LC(C)     &kp LC(V)     &trans            &kp C_VOL_DN  &kp C_PP      &trans        &trans        &trans
 // ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
 //                              ╭─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────╮
-                                 &mo SCR       &mkp LCLK     &mkp RCLK         &mkp MCLK     &kp DEL
+                                 &mo SNI       &mkp LCLK     &mkp RCLK         &mkp MCLK     &mkp LCLK 
 //                              ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────╯
       >;
     };
