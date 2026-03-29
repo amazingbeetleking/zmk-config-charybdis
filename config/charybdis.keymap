@@ -223,6 +223,11 @@
       bindings = <&kp DEL>;
       layers = <BASE>;
    };
+      combo_sleep {
+      key-positions = <0 9>;
+      bindings = <&sys_sleep>;
+      layers = <BASE>;
+};
   };
 
   keymap {
