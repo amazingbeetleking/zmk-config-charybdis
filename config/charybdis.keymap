@@ -243,6 +243,11 @@ alt_semi: alt_semi {
       bindings = <&studio_unlock>;
       layers = <BASE>;
     };
+      combo_sleep {
+      key-positions = <0 9>;
+      bindings = <&sys_sleep>;
+      layers = <BASE>;
+    };
   };
   keymap {
     compatible = "zmk,keymap";
