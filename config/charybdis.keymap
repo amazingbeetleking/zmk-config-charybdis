@@ -251,7 +251,7 @@
     &lt POI Z     &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &lt POI FSLH
 // ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
 //                              ╭─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────╮
-                    &mo_tog SCROLL SCROLL      &lt NAVI SPACE &lt FUNC TAB     &lt SYMB ENTER &lt NUMB BSPC
+                             &mo_tog SCR SCR  &lt NAVI SPACE &lt FUNC TAB     &lt SYMB ENTER &lt NUMB BSPC
 //                              ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────╯
       >;
     };
