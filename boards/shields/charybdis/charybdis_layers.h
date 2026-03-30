@@ -18,6 +18,8 @@
 #define SCR  6
 #define SNI  7
 
-// Aliases for split_input.dtsi compatibility
-#define SCROLL SCR
-#define SNIPE  SNI
+// Aliases for module compatibility
+#define SCROLL  SCR
+#define SNIPE   SNI
+#define SNIPING SNI
+#define POINTER POI
