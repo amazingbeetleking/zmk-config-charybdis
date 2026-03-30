@@ -8,13 +8,16 @@
 
 #pragma once
 
-// Layer definitions matching the keymap
+// Layer definitions
 #define BASE 0
-#define POINTER 1
-#define LOWER 2
-#define RAISE 3
-#define SYMBOLS 4
-#define SCROLL 5
-#define SNIPING 6
-#define GAMING 7
+#define NUMB 1
+#define SYMB 2
+#define NAVI 3
+#define FUNC 4
+#define POI  5
+#define SCR  6
+#define SNI  7
 
+// Aliases for split_input.dtsi compatibility
+#define SCROLL SCR
+#define SNIPE  SNI
