@@ -1,68 +1,91 @@
-/*
- * Copyright (c) 2024 The ZMK Contributors
- * SPDX-License-Identifier: MIT
- *
- * Common hardware configuration for Charybdis right keyboard variants
- * Shared between charybdis_right_standalone and dongle_charybdis_right
- */
+#include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+#include "charybdis_layers.h"
+#include "charybdis_trackball_processors.dtsi"
 
-#include "charybdis.dtsi"
-#include <zephyr/dt-bindings/input/input-event-codes.h>
+/ {
+	chosen {
+		zmk,kscan = &kscan0;
+		zmk,physical-layout = &charybdis_5col_layout;
+	};
 
-&default_transform {
-	col-offset = <5>;
-};
+	default_transform: keymap_transform_0 {
+		compatible = "zmk,matrix-transform";
+		columns = <10>;
+		rows = <4>;
+		map = <
+			RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4)    RC(0,5) RC(0,6) RC(0,7) RC(0,8) RC(0,9)
+			RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4)    RC(1,5) RC(1,6) RC(1,7) RC(1,8) RC(1,9)
+			RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)    RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
+			                RC(3,2) RC(3,3) RC(3,4)     RC(3,5)         RC(3,6)
+		>;
+	};
 
-&kscan0 {
-	col-gpios
-		= <&pro_micro  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		;
-};
+	// Receive trackball input from right peripheral
+	input_split_0: input_split_0@0 {
+		compatible = "zmk,input-split";
+		status = "okay";
+		reg = <0 1>;
+	};
 
-&pinctrl {
-    spi0_default: spi0_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 8)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
-                <NRF_PSEL(SPIM_MISO, 0, 17)>;
-        };
-    };
+	input_split_listener: input_split_listener {
+		compatible = "zmk,input-listener";
+		status = "okay";
+		device = <&input_split_0>;
 
-    spi0_sleep: spi0_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 8)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
-                <NRF_PSEL(SPIM_MISO, 0, 17)>;
-            low-power-enable;
-        };
-    };
-};
+		CHARYBDIS_TRACKBALL_PROCESSORS
+	};
 
-&spi0 {
-    status = "okay";
-    compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
-
-    trackball: trackball@0 {
-        status = "okay";
-        compatible = "pixart,pmw3610-alt";
-        reg = <0>;
-        spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <800>;
-        swap-xy;
-        invert-x;
-        invert-y;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        force-awake;
-    };
+	charybdis_5col_layout: charybdis_5col_layout {
+		compatible = "zmk,physical-layout";
+		display-name = "Charybdis 3x5";
+		transform = <&default_transform>;
+		keys
+			// Row 0 — Left
+			= <&key_physical_attrs 100 100    0   38       0     0     0>
+			, <&key_physical_attrs 100 100  100   12       0     0     0>
+			, <&key_physical_attrs 100 100  200    0       0     0     0>
+			, <&key_physical_attrs 100 100  300   12       0     0     0>
+			, <&key_physical_attrs 100 100  400   12       0     0     0>
+			// Row 0 — Right
+			, <&key_physical_attrs 100 100  800   12       0     0     0>
+			, <&key_physical_attrs 100 100  900   12       0     0     0>
+			, <&key_physical_attrs 100 100 1000    0       0     0     0>
+			, <&key_physical_attrs 100 100 1100   12       0     0     0>
+			, <&key_physical_attrs 100 100 1200   38       0     0     0>
+			// Row 1 — Left
+			, <&key_physical_attrs 100 100    0  138       0     0     0>
+			, <&key_physical_attrs 100 100  100  112       0     0     0>
+			, <&key_physical_attrs 100 100  200  100       0     0     0>
+			, <&key_physical_attrs 100 100  300  112       0     0     0>
+			, <&key_physical_attrs 100 100  400  112       0     0     0>
+			// Row 1 — Right
+			, <&key_physical_attrs 100 100  800  112       0     0     0>
+			, <&key_physical_attrs 100 100  900  112       0     0     0>
+			, <&key_physical_attrs 100 100 1000  100       0     0     0>
+			, <&key_physical_attrs 100 100 1100  112       0     0     0>
+			, <&key_physical_attrs 100 100 1200  138       0     0     0>
+			// Row 2 — Left
+			, <&key_physical_attrs 100 100    0  238       0     0     0>
+			, <&key_physical_attrs 100 100  100  212       0     0     0>
+			, <&key_physical_attrs 100 100  200  200       0     0     0>
+			, <&key_physical_attrs 100 100  300  212       0     0     0>
+			, <&key_physical_attrs 100 100  400  212       0     0     0>
+			// Row 2 — Right
+			, <&key_physical_attrs 100 100  800  212       0     0     0>
+			, <&key_physical_attrs 100 100  900  212       0     0     0>
+			, <&key_physical_attrs 100 100 1000  200       0     0     0>
+			, <&key_physical_attrs 100 100 1100  212       0     0     0>
+			, <&key_physical_attrs 100 100 1200  238       0     0     0>
+			// Thumb cluster — Left (3 keys)
+			, <&key_physical_attrs 100 100  248  314     900   298   690>
+			, <&key_physical_attrs 100 100  318  314    1500   298   690>
+			, <&key_physical_attrs 100 100  418  320    1500   298   690>
+			// Thumb cluster — Right (2 keys)
+			, <&key_physical_attrs 100 100  867  314 (-1500)  902   690>
+			, <&key_physical_attrs 100 100  952  320 (-3000)  902   690>
+			;
+	};
 };
