@@ -88,9 +88,9 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)    RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,
 
             // Thumb cluster — Left (3 keys)
             //                       w   h    x    y     rot    rx    ry
-            , <&key_physical_attrs 100 100  248  314     900   298   690>
-            , <&key_physical_attrs 100 100  318  314    1500   298   690>
-            , <&key_physical_attrs 100 100  418  320    1500   298   690>
+            , <&key_physical_attrs 100 100  220  314     900   298   690>
+            , <&key_physical_attrs 100 100  350  325    1500   298   690>
+            , <&key_physical_attrs 100 100  460  338    1500   298   690>
             // Thumb cluster — Right (2 keys)
             , <&key_physical_attrs 100 100  867  314 (-1500)  902   690>
             , <&key_physical_attrs 100 100  952  320 (-3000)  902   690>
