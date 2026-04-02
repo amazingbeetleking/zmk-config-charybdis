@@ -18,3 +18,7 @@
         CHARYBDIS_TRACKBALL_PROCESSORS
     };
 };
+
+&kscan0 {
+	wakeup-source;
+};
