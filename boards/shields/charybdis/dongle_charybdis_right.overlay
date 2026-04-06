@@ -17,3 +17,7 @@
         reg = <0 1>;  // address 0, size 1
     };
 };
+
+&kscan0 {
+    wakeup-source;
+};
