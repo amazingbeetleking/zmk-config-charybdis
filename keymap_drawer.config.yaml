@@ -89,6 +89,102 @@ parse_config:
     C_VOL_DN: $$mdi:volume-low$$
     C_PP: $$mdi:play-pause$$
     C_MUTE: $$mdi:volume-off$$
+  zmk_keycode_map:
+    LCTRL: $$mdi:apple-keyboard-control$$
+    LALT: $$mdi:apple-keyboard-option$$
+    LSHIFT: $$mdi:apple-keyboard-shift$$
+    LSHFT: $$mdi:apple-keyboard-shift$$
+    LGUI: $$mdi:apple-keyboard-command$$
+    RCTRL: $$mdi:apple-keyboard-control$$
+    RALT: $$mdi:apple-keyboard-option$$
+    RSHIFT: $$mdi:apple-keyboard-shift$$
+    RSHFT: $$mdi:apple-keyboard-shift$$
+    RGUI: $$mdi:apple-keyboard-command$$
+    UP: $$mdi:arrow-up-bold$$
+    DOWN: $$mdi:arrow-down-bold$$
+    LEFT: $$mdi:arrow-left-bold$$
+    RIGHT: $$mdi:arrow-right-bold$$
+    ENTER:
+      type: enter
+      tap: $$mdi:keyboard-return$$
+    ESC: $$mdi:keyboard-esc$$
+    TAB: $$mdi:keyboard-tab$$
+    SPACE: $$mdi:keyboard-space$$
+    BACKSPACE:
+      type: backspace
+      tap: $$mdi:backspace$$
+    BSPC:
+      type: backspace
+      tap: $$mdi:backspace$$
+    DEL: $$mdi:backspace-reverse-outline$$
+    DELETE: $$mdi:backspace-reverse-outline$$
+    CAPSLOCK: $$mdi:apple-keyboard-caps$$
+    CAPS: $$mdi:apple-keyboard-caps$$
+    C_VOL_UP: $$mdi:volume-high$$
+    C_VOL_DN: $$mdi:volume-low$$
+    C_PP: $$mdi:play-pause$$
+    C_MUTE: $$mdi:volume-off$$
+    # Symbols
+    MINUS: '-'
+    EQUAL: '='
+    EQL: '='
+    PLUS: '+'
+    UNDERSCORE: '_'
+    UNDER: '_'
+    LEFT_BRACKET: '['
+    LBKT: '['
+    LBRC: '['
+    RIGHT_BRACKET: ']'
+    RBKT: ']'
+    RBRC: ']'
+    LEFT_BRACE: '{'
+    LCBR: '{'
+    RIGHT_BRACE: '}'
+    RCBR: '}'
+    BACKSLASH: '\'
+    BSLH: '\'
+    PIPE: '|'
+    SEMICOLON: ';'
+    SEMI: ';'
+    COLON: ':'
+    SINGLE_QUOTE: "'"
+    SQT: "'"
+    APOS: "'"
+    DOUBLE_QUOTES: '"'
+    DQT: '"'
+    COMMA: ','
+    DOT: '.'
+    PERIOD: '.'
+    SLASH: '/'
+    FSLH: '/'
+    QUESTION: '?'
+    QMARK: '?'
+    GRAVE: '`'
+    TILDE: '~'
+    EXCLAMATION: '!'
+    EXCL: '!'
+    AT_SIGN: '@'
+    AT: '@'
+    HASH: '#'
+    POUND: '#'
+    DOLLAR: '$'
+    DLLR: '$'
+    PERCENT: '%'
+    PRCNT: '%'
+    CARET: '^'
+    AMPERSAND: '&'
+    AMPS: '&'
+    ASTERISK: '*'
+    ASTRK: '*'
+    ASTR: '*'
+    LEFT_PARENTHESIS: '('
+    LPAR: '('
+    RIGHT_PARENTHESIS: ')'
+    RPAR: ')'
+    LEFT_ANGLE_BRACKET: '<'
+    LT: '<'
+    RIGHT_ANGLE_BRACKET: '>'
+    GT: '>'
   trans_legend:
     t: ▽
     type: trans
