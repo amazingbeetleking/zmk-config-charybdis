@@ -1,0 +1,94 @@
+draw_config:
+  key_w: 60.0
+  key_h: 56.0
+  split_gap: 30.0
+  combo_w: 28.0
+  combo_h: 26.0
+  key_rx: 6.0
+  key_ry: 6.0
+  n_columns: 1
+  separate_combo_diagrams: false
+  combo_diagrams_scale: 2
+  inner_pad_w: 2.0
+  inner_pad_h: 2.0
+  outer_pad_w: 30.0
+  outer_pad_h: 56.0
+  line_spacing: 1.2
+  arc_radius: 6.0
+  append_colon_to_layer_header: false
+  small_pad: 2.0
+  draw_key_sides: false
+  svg_style: |
+    svg path { fill: inherit; }
+    svg.keymap {
+        font-family: Menlo,SFMono-Regular,Consolas,Liberation Mono,monospace;
+        font-size: 14px;
+        font-kerning: normal;
+        text-rendering: optimizeLegibility;
+        fill: #FFF;
+        background: #141F26;
+    }
+    rect.key { fill: #72878C; stroke: #5A6E73; stroke-width: 1; }
+    rect.side { filter: brightness(90%); }
+    rect.combo, rect.combo-separate { fill: #54929b; stroke: #007772; }
+    rect.held, rect.combo.held { stroke: #A65437; fill: #BF9278; line-height: 2; }
+    rect.ghost, rect.combo.ghost { stroke-dasharray: 4, 4; stroke-width: 2; }
+    text { text-anchor: middle; dominant-baseline: middle; }
+    text.label { text-anchor: start; stroke: white; paint-order: stroke; }
+    text.combo, text.hold, text.shifted { font-size: 11px; }
+    text.hold { text-anchor: middle; dominant-baseline: auto; }
+    text.shifted { text-anchor: middle; dominant-baseline: hanging; }
+    text.combo.hold, text.combo.shifted { font-size: 8px; }
+    text.trans { fill: #2C3A40; }
+    path.combo { stroke-width: 1; stroke: gray; fill: none; }
+    .icon-tabler > path { fill: inherit; stroke: inherit; stroke-width: 2; }
+    .icon-tabler > path[stroke="none"][fill="none"] { visibility: hidden; }
+  glyph_tap_size: 14
+  glyph_hold_size: 12
+  glyph_shifted_size: 10
+  glyphs: {}
+  glyph_urls:
+    mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
+    mdil: https://raw.githubusercontent.com/Pictogrammers/MaterialDesignLight/master/svg/{}.svg
+    tabler: https://unpkg.com/@tabler/icons/icons/{}.svg
+  use_local_cache: true
+parse_config:
+  preprocess: true
+  zmk_keycode_map:
+    LCTRL: $$mdi:apple-keyboard-control$$
+    LALT: $$mdi:apple-keyboard-option$$
+    LSHIFT: $$mdi:apple-keyboard-shift$$
+    LSHFT: $$mdi:apple-keyboard-shift$$
+    LGUI: $$mdi:apple-keyboard-command$$
+    RCTRL: $$mdi:apple-keyboard-control$$
+    RALT: $$mdi:apple-keyboard-option$$
+    RSHIFT: $$mdi:apple-keyboard-shift$$
+    RSHFT: $$mdi:apple-keyboard-shift$$
+    RGUI: $$mdi:apple-keyboard-command$$
+    UP: $$mdi:arrow-up-bold$$
+    DOWN: $$mdi:arrow-down-bold$$
+    LEFT: $$mdi:arrow-left-bold$$
+    RIGHT: $$mdi:arrow-right-bold$$
+    ENTER:
+      type: enter
+      tap: $$mdi:keyboard-return$$
+    ESC: $$mdi:keyboard-esc$$
+    TAB: $$mdi:keyboard-tab$$
+    SPACE: $$mdi:keyboard-space$$
+    BACKSPACE:
+      type: backspace
+      tap: $$mdi:backspace$$
+    BSPC:
+      type: backspace
+      tap: $$mdi:backspace$$
+    DEL: $$mdi:backspace-reverse-outline$$
+    DELETE: $$mdi:backspace-reverse-outline$$
+    CAPSLOCK: $$mdi:apple-keyboard-caps$$
+    CAPS: $$mdi:apple-keyboard-caps$$
+    C_VOL_UP: $$mdi:volume-high$$
+    C_VOL_DN: $$mdi:volume-low$$
+    C_PP: $$mdi:play-pause$$
+    C_MUTE: $$mdi:volume-off$$
+  trans_legend:
+    t: ▽
+    type: trans
