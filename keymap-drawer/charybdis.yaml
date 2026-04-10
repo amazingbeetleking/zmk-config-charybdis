@@ -20,7 +20,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: SEMI, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-command$$'}
   - {t: Z, h: Pointer}
   - X
   - C
@@ -28,84 +28,84 @@ layers:
   - B
   - N
   - M
-  - COMMA
-  - DOT
-  - {t: FSLH, h: Pointer}
+  - ','
+  - .
+  - {t: /, h: Pointer}
   - {t: Scroll, h: Scroll, s: 'Ctl+Sft+$$mdi:keyboard-tab$$'}
   - {t: '$$mdi:keyboard-space$$', h: Navigation}
   - {t: '$$mdi:keyboard-tab$$', h: Function}
   - {t: '$$mdi:keyboard-return$$', h: Symbol}
   - {t: '$$mdi:backspace$$', h: Number}
   Number:
-  - GRAVE
+  - '`'
   - '7'
   - '8'
   - '9'
-  - RBKT
+  - ']'
   - {t: ▽, type: trans}
   - '&alt_semi'
-  - LBKT
-  - RBKT
+  - '['
+  - ']'
   - {t: ▽, type: trans}
-  - LBKT
+  - '['
   - '4'
   - '5'
   - '6'
-  - EQUAL
+  - '='
   - '&alt_colon'
   - $$mdi:apple-keyboard-shift$$
-  - {t: LPAR, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: RPAR, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: (, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ), h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:apple-keyboard-command$$
-  - APOS
+  - ''''
   - '1'
   - '2'
   - '3'
   - KP DIVIDE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LBRC
-  - RBRC
+  - '['
+  - ']'
   - {t: ▽, type: trans}
   - '&alt_dot'
   - '0'
-  - MINUS
+  - '-'
   - {t: ▽, type: trans}
   - {type: held}
   Symbol:
-  - TILDE
-  - AMPS
-  - ASTRK
-  - LPAR
-  - RBRC
+  - '~'
+  - '&'
+  - '*'
+  - (
+  - ']'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LBRC
-  - DLLR
-  - PRCNT
-  - CARET
-  - PLUS
+  - '['
+  - $
+  - '%'
+  - ^
+  - +
   - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
-  - DQT
-  - EXCL
-  - AT
-  - HASH
-  - BSLH
+  - '"'
+  - '!'
+  - '@'
+  - '#'
+  - \
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LPAR
-  - RPAR
-  - UNDER
+  - (
+  - )
+  - _
   - {type: held}
   - {t: ▽, type: trans}
   Navigation:
@@ -179,7 +179,7 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - Ctl+KP MINUS
-  - PIPE
+  - '|'
   Pointer:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
